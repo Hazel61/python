@@ -10,7 +10,7 @@ def string_manip(first_name):
     all_caps = name.upper()
     all_lowercase = name.lower()
     first_five_letters = name[0:5]
-    last_two_letters = name[-1:-2]
+    last_two_letters = name[-2:]
 
     return [all_caps, all_lowercase, first_five_letters, last_two_letters]
 
@@ -22,7 +22,7 @@ def greeter_bot():
     # Hint: to get the test to pass, the greeting should be "Hello, input name"
     fname = input("Please enter your name: ")
     name = fname
-    print("Hello", name)
+    print("Hello, " + name + "!")
 
 
 def temp_calculator():
@@ -30,8 +30,7 @@ def temp_calculator():
     # The formula is C = (F - 32) * (5/9).
     tempc = input("Please enter a temperature in celsius: ")
     tempf = (float(tempc) * (9/5)) + 32
-
-    print(tempc, "is", tempf, "when converted to fahrenheit")
+    print(tempf)
 
 def equitable_bill_splitter():
     # This program splits a bill based on the salary of each person dining.
