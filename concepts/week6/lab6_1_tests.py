@@ -3,7 +3,7 @@ import lab6_1 as target
 
 class TestLab6(unittest.TestCase):
    def setUp(self):
-      self.list_of_words = ["Banana", "Apple", "Grapefruit"]
+      self.list_of_words = ["banana", "apple", "grapefruit"]
       self.text = "The banana is greater than the apple. The banana is less than the grapefruit."
       self.file = "test6_1.txt"
 
@@ -29,11 +29,11 @@ class TestLab6(unittest.TestCase):
       self.assertTrue(target.compare_it(5, 5))
    
    def test_keyword_counter_boolean_true_works(self):
-      expected = {"Banana": 2, "Apple": 1, "Grapefruit": 1}
+      expected = {"banana": 2, "apple": 1, "grapefruit": 1}
       out = target.keyword_counter(self.list_of_words, True, self.text)
       self.assertEqual(out, expected)
    
    def test_keyword_counter_reads_file(self):
-      expected = {"Banana": 6, "Apple": 3, "Grapefruit": 3}
+      expected = {"banana": 6, "apple": 3, "grapefruit": 3}
       out = target.keyword_counter(self.list_of_words, False, self.file)
       self.assertEqual(out, expected)

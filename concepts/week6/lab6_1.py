@@ -55,16 +55,13 @@ def compare_it(num1, num2):
 
 
 def keyword_counter(list_of_words, spam, eggs):
-    print (list_of_words)
     data = eggs
-    print (data)
     if not spam:
         with open(eggs, "r") as fh:
-            data = fh.read().replace("/n", " ")
+            data = fh.read().replace("\n", " ")
     results = {key:0 for key in list_of_words}
     list_of_words = [list_word.lower() for list_word in list_of_words]
     for data_word in data.split(" "):
-        print(data_word)
         data_word = data_word.rstrip(punctuation)
         if data_word.lower() in list_of_words:
             results[data_word] += 1
