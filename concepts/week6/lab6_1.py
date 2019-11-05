@@ -1,4 +1,6 @@
-# Write a function called divisible_by_7. 
+from string import punctuation
+
+# Write a function called divisible_by_7.
 # This function must take an integer as a parameter.
 # This function must return True if the passed integer
 # is divisible by 7 or false if not.
@@ -51,16 +53,28 @@ def compare_it(num1, num2):
 # "fish", "Fish", "FISH" or any other combination of 
 # capitalization as an occurrence.
 
+
 def keyword_counter(list_of_words, spam, eggs):
+    print (list_of_words)
     data = eggs
+    print (data)
     if not spam:
         with open(eggs, "r") as fh:
             data = fh.read().replace("/n", " ")
     results = {key:0 for key in list_of_words}
-    for word in data.split(" "):
-        if word in list_of_words:
-            results[word] += 1
+    list_of_words = [list_word.lower() for list_word in list_of_words]
+    for data_word in data.split(" "):
+        print(data_word)
+        data_word = data_word.rstrip(punctuation)
+        if data_word.lower() in list_of_words:
+            results[data_word] += 1
     return results
+
+
+
+
+
+
 
 
 
